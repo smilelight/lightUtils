@@ -2,3 +2,6 @@
 youdao/config.py
 youdao/__pychare__
 .idea
+build
+dist
+lightUtils.egg-info
