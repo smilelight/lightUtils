@@ -1,19 +1,24 @@
 from distutils.core import setup
 import setuptools
 
+with open('./README.md', 'r', encoding='utf8') as f:
+    long_description = f.read()
+
+with open('./requirements.txt', 'r', encoding='utf8') as f:
+    install_requires = list(map(lambda x: x.strip(), f.readlines()))
+
 setup(
     name='lightUtils',
-    version='0.1.0.0',
-    description= "lightsmile's utils library",
+    version='0.1.1',
+    description=long_description,
     author='lightsmile',
     author_email='iamlightsmile@gmail.com',
     url='https://github.com/smilelight/lightUtils',
     packages=setuptools.find_packages(),
-    install_requires=[
-        'torchtext>=0.4.0',
-        'tqdm>=4.28.1',
-        'torch>=1.0.0'
-    ],
+    install_requires=install_requires,
+    long_description=long_description,
+    long_description_content_type='text/markdown',
+    license='MIT',
     classifiers=[
         'Development Status :: 4 - Beta',
         'Operating System :: OS Independent',
