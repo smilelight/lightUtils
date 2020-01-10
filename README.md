@@ -44,3 +44,9 @@ print(port)
 ## 参考
 1. [lightless233/colorlog: Python彩色log模块封装](https://github.com/lightless233/colorlog)
 2. [Getting a random free tcp port in python using sockets](https://gist.github.com/gabrielfalcao/20e567e188f588b65ba2)
+
+## 打赏
+
+如果该项目对您有所帮助，欢迎打赏~
+
+![lho7wD.jpg](https://s2.ax1x.com/2020/01/10/lho7wD.jpg)
