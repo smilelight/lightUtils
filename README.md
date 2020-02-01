@@ -7,6 +7,7 @@
 
 1. 彩色日志
 2. 获取系统可用tcp端口
+3. 从文件中逐行获取json对象
 
 ## 使用
 
@@ -39,6 +40,38 @@ print(port)
 ```bash
 49783
 <class 'int'>
+```
+
+### 3.从文件中逐行获取json对象
+
+从文件中逐行获取json对象，
+
+#### 示例
+
+```python
+from lightutils import read_json_line
+
+for obj in read_json_line('test.json'):
+    print(obj)
+```
+
+执行结果为：
+```bash
+{'info': {'word': '丘为', 'means': [['寻西山隐者不遇', '寻西山隐者不遇'], ['左掖梨花', '左掖梨花']]}, 'type': 'ambiguous'}
+{'info': {'word': '丘为', 'means': [['寻西山隐者不遇', '寻西山隐者不遇'], ['左掖梨花', '左掖梨花']]}, 'type': 'ambiguous'}
+```
+
+原文件内容为：
+```json
+{"info": {"word": "丘为", "means": [["寻西山隐者不遇", "寻西山隐者不遇"], ["左掖梨花", "左掖梨花"]]}, "type": "ambiguous"}
+{asdf}
+{"info": {"word": "丘为", "means": [["寻西山隐者不遇", "寻西山隐者不遇"], ["左掖梨花", "左掖梨花"]]}, "type": "ambiguous"}
+```
+
+错误输出日志`error.log`内容如下：
+```text
+line2: {asdf}
+
 ```
 
 ## 参考
