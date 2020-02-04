@@ -8,6 +8,8 @@
 1. 彩色日志
 2. 获取系统可用tcp端口
 3. 从文件中逐行获取json对象
+4. 发送邮件
+5. 将时间间隔（s为单位）转换为日时分秒表示
 
 ## 使用
 
@@ -74,9 +76,72 @@ line2: {asdf}
 
 ```
 
+### 4.发送邮件
+
+使用Python发送一封邮件
+
+#### 示例
+
+```python
+from lightutils import send_email_notification
+
+to = "iamlightsmile@qq.com"
+subject = "just a test"
+contents = ["the test of lightUtils's send_email_notification function"]
+result = send_email_notification(to, subject, contents)
+if result:
+    print("发送成功！")
+else:
+    print("发送失败！")
+```
+
+#### 运行结果：
+
+```text
+发送成功！
+```
+
+#### 效果截图：
+
+![UTOOLS1580802152439.png](https://lightsmile-img.oss-cn-beijing.aliyuncs.com/UTOOLS1580802152439.png)
+
+### 5.将时间间隔（s为单位）转换为日时分秒表示
+
+#### 使用示例
+
+```python
+from lightutils import time_convert
+
+print(time_convert(10000000))
+print(time_convert(1000000))
+print(time_convert(100000))
+print(time_convert(10000))
+print(time_convert(1000))
+print(time_convert(100))
+print(time_convert(10))
+print(time_convert(1))
+print(time_convert(0))
+```
+
+#### 运行结果：
+
+```text
+115天17小时46分钟40秒
+11天13小时46分钟40秒
+1天3小时46分钟40秒
+2小时46分钟40秒
+16分钟40秒
+1分钟40秒
+10秒
+1秒
+0秒
+```
 ## 参考
 1. [lightless233/colorlog: Python彩色log模块封装](https://github.com/lightless233/colorlog)
 2. [Getting a random free tcp port in python using sockets](https://gist.github.com/gabrielfalcao/20e567e188f588b65ba2)
+3. [kootenpv/yagmail: Send email in Python conveniently for gmail using yagmail](https://github.com/kootenpv/yagmail)
+4. [Python最良心的邮件发送库--yagmail_Detector_的博客-CSDN博客](https://blog.csdn.net/Detector_/article/details/79673875)
+5. [Python用QQ邮箱发送邮件时授权码问题_wateryouyo的博客-CSDN博客](https://blog.csdn.net/wateryouyo/article/details/51766345)
 
 ## 打赏
 
