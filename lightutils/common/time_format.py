@@ -1,12 +1,12 @@
 def time_convert(spend_time):
     temp = spend_time
-    second = temp % 60
+    second = round(temp % 60, 2)
     temp = temp // 60
-    minute = temp % 60
+    minute = int(temp % 60)
     temp = temp // 60
-    hour = temp % 24
+    hour = int(temp % 24)
     temp = temp // 24
-    day = temp
+    day = int(temp)
     format_str = ""
     if day > 0:
         format_str += "{}天".format(day)

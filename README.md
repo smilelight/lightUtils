@@ -112,29 +112,29 @@ else:
 ```python
 from lightutils import time_convert
 
-print(time_convert(10000000))
-print(time_convert(1000000))
-print(time_convert(100000))
-print(time_convert(10000))
-print(time_convert(1000))
-print(time_convert(100))
-print(time_convert(10))
-print(time_convert(1))
-print(time_convert(0))
+print(time_convert(10000000.234))
+print(time_convert(1000000.0))
+print(time_convert(100000.0))
+print(time_convert(10000.0))
+print(time_convert(1000.0))
+print(time_convert(100.0))
+print(time_convert(10.0))
+print(time_convert(1.0))
+print(time_convert(0.0))
 ```
 
 #### 运行结果：
 
 ```text
-115天17小时46分钟40秒
-11天13小时46分钟40秒
-1天3小时46分钟40秒
-2小时46分钟40秒
-16分钟40秒
-1分钟40秒
-10秒
-1秒
-0秒
+115天17小时46分钟40.23秒
+11天13小时46分钟40.0秒
+1天3小时46分钟40.0秒
+2小时46分钟40.0秒
+16分钟40.0秒
+1分钟40.0秒
+10.0秒
+1.0秒
+0.0秒
 ```
 ## 参考
 1. [lightless233/colorlog: Python彩色log模块封装](https://github.com/lightless233/colorlog)
