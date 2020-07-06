@@ -11,6 +11,7 @@
 4. 发送邮件
 5. 将时间间隔（s为单位）转换为日时分秒表示
 6. 将迭代器转化为批量数据返回形式
+7. 执行系统命令并获取执行结果
 
 ## 使用
 
@@ -165,6 +166,32 @@ if __name__ == '__main__':
 [90, 91, 92, 93, 94, 95, 96, 97, 98, 99]
 ```
 
+### 7.执行系统命令并获取执行结果
+
+#### 使用示例
+
+```python
+from lightutils import execute_cmd
+
+if __name__ == '__main__':
+    state, info = execute_cmd('ls')
+    if state:
+        print(info)
+```
+
+#### 运行结果：
+
+```text
+chunk_demo.py
+cmd_demo.py
+error.log
+json_file_demo.py
+log_demo.py
+port_demo.py
+send_email_demo.py
+test.json
+time_convert_demo.py
+```
 
 ## 参考
 1. [lightless233/colorlog: Python彩色log模块封装](https://github.com/lightless233/colorlog)
@@ -173,6 +200,8 @@ if __name__ == '__main__':
 4. [Python最良心的邮件发送库--yagmail_Detector_的博客-CSDN博客](https://blog.csdn.net/Detector_/article/details/79673875)
 5. [Python用QQ邮箱发送邮件时授权码问题_wateryouyo的博客-CSDN博客](https://blog.csdn.net/wateryouyo/article/details/51766345)
 6. [python - how to split an iterable in constant-size chunks - Stack Overflow](https://stackoverflow.com/questions/8290397/how-to-split-an-iterable-in-constant-size-chunks)
+7. [python获取系统信息模块详解 - 编程语言 - 亿速云](https://www.yisu.com/zixun/46486.html)
+8. [Python中调用命令行的几种方法 - 简书](https://www.jianshu.com/p/5320ff8046b2)
 
 ## 打赏
 
