@@ -15,14 +15,21 @@ class NotSpecifiedFileException(Exception):
             self._info = '/'.join(info)
 
     def __str__(self):
-        return "并非指定的文件错误，应该是形如：{}".format(self._info)
+        return "并非指定的文件错误，应该是形如：xx.{}".format(self._info)
 
 
 def check_file(file_path: str, ext: Union[str, List[str]] = None):
     if not os.path.exists(file_path):
         raise FileNotFoundError
-    if ext and not file_path.endswith(ext):
-        raise NotSpecifiedFileException('xx.' + ext)
+    if ext:
+        if isinstance(ext, str) and not file_path.endswith(ext):
+            raise NotSpecifiedFileException(ext)
+        if isinstance(ext, list):
+            file_ext = os.path.splitext(file_path)[-1]
+            if file_ext:
+                file_ext = file_ext[1:]
+            if file_ext not in ext:
+                raise NotSpecifiedFileException(ext)
 
 
 def get_file_name(file_path: str):
@@ -40,4 +47,5 @@ if __name__ == '__main__':
     # check_file('fuck.txt', 'txt')
     # check_file('__init__.py', 'txt')
     check_file('__init__.py', 'py')
+    check_file('__init__.py', ['py', 'pyw'])
     print(get_file_name('hello_world.py'))

@@ -7,5 +7,5 @@ from lightutils import check_file
 
 if __name__ == '__main__':
     # check_file('fuck.txt', 'txt')
-    check_file('file_demo.py', 'txt')
+    check_file('check_file_demo.py', ['txt', 'py'])
     # check_file('file_demo.py', 'py')
