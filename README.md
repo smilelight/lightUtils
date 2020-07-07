@@ -12,6 +12,7 @@
 5. 将时间间隔（s为单位）转换为日时分秒表示
 6. 将迭代器转化为批量数据返回形式
 7. 执行系统命令并获取执行结果
+8. 检查文件是否存在以及是否对应相应拓展名
 
 ## 使用
 
@@ -191,6 +192,30 @@ port_demo.py
 send_email_demo.py
 test.json
 time_convert_demo.py
+```
+
+### 8.检查文件是否存在以及是否对应相应拓展名
+
+#### 使用示例
+
+```text
+from lightutils import check_file
+
+if __name__ == '__main__':
+    # check_file('fuck.txt', 'txt')
+    check_file('file_demo.py', 'txt')
+    # check_file('file_demo.py', 'py')
+```
+
+#### 运行效果
+
+```text
+Traceback (most recent call last):
+  File "E:/Projects/myProjects/lightUtils/examples/file_demo.py", line 10, in <module>
+    check_file('file_demo.py', 'txt')
+  File "E:\Projects\myProjects\lightUtils\lightutils\common\file.py", line 25, in check_file
+    raise NotSpecifiedFileException('xx.' + ext)
+lightutils.common.file.NotSpecifiedFileException: 并非指定的文件错误，应该是形如：xx.txt
 ```
 
 ## 参考
