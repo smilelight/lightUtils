@@ -25,7 +25,19 @@ def check_file(file_path: str, ext: Union[str, List[str]] = None):
         raise NotSpecifiedFileException('xx.' + ext)
 
 
+def get_file_name(file_path: str):
+    """
+    获取文件名，例如：
+    :param file_path: fuck/fuck/fuck.txt -> fuck
+    :return: 文件名，不含拓展名
+    """
+    _, name = os.path.split(file_path)
+    file_name, _ = os.path.splitext(name)
+    return file_name
+
+
 if __name__ == '__main__':
     # check_file('fuck.txt', 'txt')
     # check_file('__init__.py', 'txt')
     check_file('__init__.py', 'py')
+    print(get_file_name('hello_world.py'))

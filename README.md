@@ -13,6 +13,7 @@
 6. 将迭代器转化为批量数据返回形式
 7. 执行系统命令并获取执行结果
 8. 检查文件是否存在以及是否对应相应拓展名
+9. 获取文件名，不含拓展名
 
 ## 使用
 
@@ -216,6 +217,23 @@ Traceback (most recent call last):
   File "E:\Projects\myProjects\lightUtils\lightutils\common\file.py", line 25, in check_file
     raise NotSpecifiedFileException('xx.' + ext)
 lightutils.common.file.NotSpecifiedFileException: 并非指定的文件错误，应该是形如：xx.txt
+```
+
+### 9.获取文件名，不含拓展名
+
+#### 使用示例
+
+```python
+from lightutils import get_file_name
+
+if __name__ == '__main__':
+    print(get_file_name("hello_world.py"))
+```
+
+#### 运行效果
+
+```text
+hello_world
 ```
 
 ## 参考
