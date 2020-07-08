@@ -14,7 +14,7 @@ encode_dict = {
 
 def execute_cmd(cmd: str):
     try:
-        process = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        process = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         cmd_output = process.stdout.read().decode(encode_dict[platform.system()])
         return True, cmd_output
     except Exception:
