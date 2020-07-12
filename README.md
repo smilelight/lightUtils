@@ -14,6 +14,7 @@
 7. 执行系统命令并获取执行结果
 8. 检查文件是否存在以及是否对应相应拓展名
 9. 获取文件名，不含拓展名
+10. 将迭代器截断，只返回前面部分
 
 ## 使用
 
@@ -234,6 +235,34 @@ if __name__ == '__main__':
 
 ```text
 hello_world
+```
+
+### 10.将迭代器截断，只返回前面部分
+
+#### 使用示例
+
+```python
+from lightutils import cutoff_iter
+
+if __name__ == '__main__':
+
+    for item in cutoff_iter(range(20)):
+        print(item)
+```
+
+#### 运行效果
+
+```text
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
 ```
 
 ## 参考
