@@ -15,6 +15,8 @@
 8. 检查文件是否存在以及是否对应相应拓展名
 9. 获取文件名，不含拓展名
 10. 将迭代器截断，只返回前面部分
+11. 获取变量名
+12. 获取变量类型和属性信息
 
 ## 使用
 
@@ -265,6 +267,42 @@ if __name__ == '__main__':
 9
 ```
 
+### 11. 获取变量名
+
+#### 使用示例
+
+```python
+from lightutils import retrieve_name
+
+if __name__ == '__main__':
+    a = 3
+    print(retrieve_name(a))
+```
+
+```text
+a
+```
+
+#### 运行效果
+
+### 12. 获取变量类型和属性信息
+
+#### 使用示例
+
+```python
+from lightutils import inspect_variable
+
+if __name__ == '__main__':
+    a = 3
+    print(inspect_variable(a))
+```
+
+#### 运行效果
+
+```text
+{'name': 'a', 'type': "<class 'int'>", 'attrs': "['__abs__', '__add__', '__and__', '__bool__', '__ceil__', '__class__', '__delattr__', '__dir__', '__divmod__', '__doc__', '__eq__', '__float__', '__floor__', '__floordiv__', '__format__', '__ge__', '__getattribute__', '__getnewargs__', '__gt__', '__hash__', '__index__', '__init__', '__init_subclass__', '__int__', '__invert__', '__le__', '__lshift__', '__lt__', '__mod__', '__mul__', '__ne__', '__neg__', '__new__', '__or__', '__pos__', '__pow__', '__radd__', '__rand__', '__rdivmod__', '__reduce__', '__reduce_ex__', '__repr__', '__rfloordiv__', '__rlshift__', '__rmod__', '__rmul__', '__ror__', '__round__', '__rpow__', '__rrshift__', '__rshift__', '__rsub__', '__rtruediv__', '__rxor__', '__setattr__', '__sizeof__', '__str__', '__sub__', '__subclasshook__', '__truediv__', '__trunc__', '__xor__', 'bit_length', 'conjugate', 'denominator', 'from_bytes', 'imag', 'numerator', 'real', 'to_bytes']"}
+```
+
 ## 参考
 1. [lightless233/colorlog: Python彩色log模块封装](https://github.com/lightless233/colorlog)
 2. [Getting a random free tcp port in python using sockets](https://gist.github.com/gabrielfalcao/20e567e188f588b65ba2)
@@ -274,6 +312,7 @@ if __name__ == '__main__':
 6. [python - how to split an iterable in constant-size chunks - Stack Overflow](https://stackoverflow.com/questions/8290397/how-to-split-an-iterable-in-constant-size-chunks)
 7. [python获取系统信息模块详解 - 编程语言 - 亿速云](https://www.yisu.com/zixun/46486.html)
 8. [Python中调用命令行的几种方法 - 简书](https://www.jianshu.com/p/5320ff8046b2)
+9. [python如何将变量名转化为同名字符串？ - 知乎](https://www.zhihu.com/question/42768955)
 
 ## 打赏
 
