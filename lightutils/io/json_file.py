@@ -2,7 +2,7 @@ import json
 import os
 
 
-def read_json_line(filename: str, error_file: str=None):
+def read_json_line(filename: str, error_file: str = None):
     """
     从文件中逐行获取json对象
     :param filename: json文件名
@@ -22,3 +22,14 @@ def read_json_line(filename: str, error_file: str=None):
                 with open(error_file, 'a+', encoding='utf-8') as err_f:
                     err_f.write("line{}: {}".format(line_count, line))
                     continue
+
+
+def write_json_line(file_obj, json_obj):
+    """
+    将数据对象以json格式写入到文件中
+    :param file_obj: 文件对象
+    :param json_obj: 可以被序列化为json字符串的数据对象
+    :return:
+    """
+    file_obj.write(json.dumps(json_obj, ensure_ascii=False))
+    file_obj.write('\n')

@@ -17,6 +17,7 @@
 10. 将迭代器截断，只返回前面部分
 11. 获取变量名
 12. 获取变量类型和属性信息
+13. 将可序列化对象以json格式写入文件中
 
 ## 使用
 
@@ -301,6 +302,25 @@ if __name__ == '__main__':
 
 ```text
 {'name': 'a', 'type': "<class 'int'>", 'attrs': "['__abs__', '__add__', '__and__', '__bool__', '__ceil__', '__class__', '__delattr__', '__dir__', '__divmod__', '__doc__', '__eq__', '__float__', '__floor__', '__floordiv__', '__format__', '__ge__', '__getattribute__', '__getnewargs__', '__gt__', '__hash__', '__index__', '__init__', '__init_subclass__', '__int__', '__invert__', '__le__', '__lshift__', '__lt__', '__mod__', '__mul__', '__ne__', '__neg__', '__new__', '__or__', '__pos__', '__pow__', '__radd__', '__rand__', '__rdivmod__', '__reduce__', '__reduce_ex__', '__repr__', '__rfloordiv__', '__rlshift__', '__rmod__', '__rmul__', '__ror__', '__round__', '__rpow__', '__rrshift__', '__rshift__', '__rsub__', '__rtruediv__', '__rxor__', '__setattr__', '__sizeof__', '__str__', '__sub__', '__subclasshook__', '__truediv__', '__trunc__', '__xor__', 'bit_length', 'conjugate', 'denominator', 'from_bytes', 'imag', 'numerator', 'real', 'to_bytes']"}
+```
+
+### 13. 将可序列化对象以json格式写入文件中
+
+#### 使用示例
+
+```python
+from lightutils import write_json_line
+
+if __name__ == '__main__':
+    with open('./write_json.json', 'w', encoding='utf-8') as file:
+        write_json_line(file, {'a': 3})
+```
+
+#### 运行效果
+
+`write_json.json`文件内容：
+```text
+{"a": 3}
 ```
 
 ## 参考
