@@ -16,6 +16,10 @@ def green_color(text):
     return u'\033[32m%s\033[0m' % text
 
 
+def blue_color(text):
+    return u'\033[1;34m%s\033[0m' % text
+
+
 def string_compare(source, target):
     _, mapping = longest_common_subsequence(source, target)
     source_idxs = set([i for i, j in mapping])
@@ -30,6 +34,6 @@ def string_compare(source, target):
         if i in target_idxs:
             colored_target += green_color(j)
         else:
-            colored_target += red_color(j)
+            colored_target += blue_color(j)
     print(colored_source)
     print(colored_target)

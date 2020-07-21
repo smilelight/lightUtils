@@ -340,8 +340,7 @@ if __name__ == '__main__':
 ```
 
 #### 运行效果
-
-![比较两个字符串差异，高亮差异部分效果图](https://lightsmile-img.oss-cn-beijing.aliyuncs.com/字符串差异比较.png)
+![比较两个字符串差异，高亮差异部分效果图](https://lightsmile-img.oss-cn-beijing.aliyuncs.com/字符串比较颜色更新.png)
 
 ## 参考
 1. [lightless233/colorlog: Python彩色log模块封装](https://github.com/lightless233/colorlog)
