@@ -9,7 +9,7 @@ with open('./requirements.txt', 'r', encoding='utf8') as f:
 
 setup(
     name='lightUtils',
-    version='0.1.12.0',
+    version='0.1.13.0',
     description="lightsmile's personal Python util libs",
     author='lightsmile',
     author_email='iamlightsmile@gmail.com',

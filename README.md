@@ -18,6 +18,7 @@
 11. 获取变量名
 12. 获取变量类型和属性信息
 13. 将可序列化对象以json格式写入文件中
+14. 比较两个字符串差异，高亮差异部分
 
 ## 使用
 
@@ -323,6 +324,25 @@ if __name__ == '__main__':
 {"a": 3}
 ```
 
+### 14. 比较两个字符串差异，高亮差异部分
+
+代码主要是copy自苏神的[bojone/text_compare: 用python比较两个字符串差异，高亮差异部分](https://github.com/bojone/text_compare)
+
+#### 使用示例
+
+```python
+from lightutils import string_compare
+
+if __name__ == '__main__':
+    a = "上周去钓鱼"
+    b = "上周去爬山"
+    string_compare(a, b)
+```
+
+#### 运行效果
+
+![比较两个字符串差异，高亮差异部分效果图](https://lightsmile-img.oss-cn-beijing.aliyuncs.com/字符串差异比较.png)
+
 ## 参考
 1. [lightless233/colorlog: Python彩色log模块封装](https://github.com/lightless233/colorlog)
 2. [Getting a random free tcp port in python using sockets](https://gist.github.com/gabrielfalcao/20e567e188f588b65ba2)
@@ -333,6 +353,8 @@ if __name__ == '__main__':
 7. [python获取系统信息模块详解 - 编程语言 - 亿速云](https://www.yisu.com/zixun/46486.html)
 8. [Python中调用命令行的几种方法 - 简书](https://www.jianshu.com/p/5320ff8046b2)
 9. [python如何将变量名转化为同名字符串？ - 知乎](https://www.zhihu.com/question/42768955)
+10. [bert4keras/snippets.py at master · bojone/bert4keras](https://github.com/bojone/bert4keras/blob/master/bert4keras/snippets.py)
+11. [bojone/text_compare: 用python比较两个字符串差异，高亮差异部分](https://github.com/bojone/text_compare)
 
 ## 打赏
 
