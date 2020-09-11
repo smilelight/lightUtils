@@ -1,6 +1,9 @@
 from distutils.core import setup
 import setuptools
 
+with open('./version.txt', encoding='utf8') as f:
+    version = f.read().strip()
+
 with open('./README.md', 'r', encoding='utf8') as f:
     long_description = f.read()
 
@@ -9,7 +12,7 @@ with open('./requirements.txt', 'r', encoding='utf8') as f:
 
 setup(
     name='lightUtils',
-    version='0.1.13.1',
+    version=version,
     description="lightsmile's personal Python util libs",
     author='lightsmile',
     author_email='iamlightsmile@gmail.com',

@@ -19,6 +19,7 @@
 12. 获取变量类型和属性信息
 13. 将可序列化对象以json格式写入文件中
 14. 比较两个字符串差异，高亮差异部分
+15. 根据项目名和当前脚本路径检测项目路径并添加至系统路径
 
 ## 使用
 
@@ -341,6 +342,28 @@ if __name__ == '__main__':
 
 #### 运行效果
 ![比较两个字符串差异，高亮差异部分效果图](https://lightsmile-img.oss-cn-beijing.aliyuncs.com/字符串比较颜色更新.png)
+
+### 15. 根据项目名和当前脚本路径检测项目路径并添加至系统路径
+
+主要应用场景是在一个项目中需要根据路径去添加和使用包，这里提供程序自动检测的功能，以使得不必操心具体相对路径位置，只要提供程序包名即可。
+
+#### 使用示例
+
+```python
+from lightutils import add_sys_path
+
+project_path = 'lightutils'
+
+if __name__ == '__main__':
+    add_sys_path(__file__, project_path)
+```
+
+#### 运行结果
+
+```bash
+D:\Software\Anaconda3\envs\spider\python.exe E:/Projects/myProjects/lightUtils/examples/add_path_demo.py
+[2020-09-11 10:24:47] [INFO] [MainThread] [path.py:27] 已成功将E:/Projects/myProjects/lightUtils添加至系统路径
+```
 
 ## 参考
 1. [lightless233/colorlog: Python彩色log模块封装](https://github.com/lightless233/colorlog)
