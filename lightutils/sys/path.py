@@ -10,7 +10,7 @@ def add_sys_path(file_path: str, project_name: str):
     if not os.path.exists(file_path):
         raise FileNotFoundError("{} not found".format(file_path))
     flag = False
-    parent_path = file_path
+    parent_path = os.path.abspath(file_path)
     parent_name = get_file_name(parent_path)
     project_path = None
     while parent_name:
