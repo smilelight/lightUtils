@@ -20,6 +20,7 @@
 13. 将可序列化对象以json格式写入文件中
 14. 比较两个字符串差异，高亮差异部分
 15. 根据项目名和当前脚本路径检测项目路径并添加至系统路径
+16. 读取yaml文件
 
 ## 使用
 
@@ -363,6 +364,30 @@ if __name__ == '__main__':
 ```bash
 D:\Software\Anaconda3\envs\spider\python.exe E:/Projects/myProjects/lightUtils/examples/add_path_demo.py
 [2020-09-11 10:24:47] [INFO] [MainThread] [path.py:27] 已成功将E:/Projects/myProjects/lightUtils添加至系统路径
+```
+
+### 16.读取yaml文件
+
+```python
+# -*- coding: utf-8 -*-
+from lightutils import load_yaml
+
+yaml_path = 'test.yml'
+
+if __name__ == '__main__':
+    print(load_yaml(yaml_path))
+```
+
+`test.yml`文件内容：
+
+```yaml
+test: 3
+```
+
+程序运行结果：
+
+```shell script
+{'test': 3}
 ```
 
 ## 参考
