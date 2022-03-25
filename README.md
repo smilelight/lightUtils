@@ -21,6 +21,7 @@
 14. 比较两个字符串差异，高亮差异部分
 15. 根据项目名和当前脚本路径检测项目路径并添加至系统路径
 16. 读取yaml文件
+17. 终端彩色输出
 
 ## 使用
 
@@ -390,6 +391,14 @@ test: 3
 {'test': 3}
 ```
 
+### 17.终端彩色输出
+
+```python
+from lightutils import color
+
+print(color.green("green"))
+```
+
 ## 参考
 1. [lightless233/colorlog: Python彩色log模块封装](https://github.com/lightless233/colorlog)
 2. [Getting a random free tcp port in python using sockets](https://gist.github.com/gabrielfalcao/20e567e188f588b65ba2)
@@ -402,6 +411,7 @@ test: 3
 9. [python如何将变量名转化为同名字符串？ - 知乎](https://www.zhihu.com/question/42768955)
 10. [bert4keras/snippets.py at master · bojone/bert4keras](https://github.com/bojone/bert4keras/blob/master/bert4keras/snippets.py)
 11. [bojone/text_compare: 用python比较两个字符串差异，高亮差异部分](https://github.com/bojone/text_compare)
+12. [reorx/python-terminal-color: Drop-in single file library for printing color in terminal](https://github.com/reorx/python-terminal-color)
 
 ## 打赏
 
