@@ -1,3 +1,4 @@
 requests
 yagmail
 PyYAML
+tqdm

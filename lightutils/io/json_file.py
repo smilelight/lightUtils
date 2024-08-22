@@ -1,6 +1,8 @@
 import json
 import os
 
+from tqdm import tqdm
+
 
 def read_json_line(filename: str, error_file: str = None):
     """
@@ -33,3 +35,13 @@ def write_json_line(file_obj, json_obj):
     """
     file_obj.write(json.dumps(json_obj, ensure_ascii=False))
     file_obj.write('\n')
+
+
+def get_json_list(path):
+    with open(path, encoding="utf8") as f:
+        for line in tqdm(f):
+            yield json.loads(line.strip())
+
+def get_std_json_list():
+    for line in tqdm(sys.stdin):
+        yield json.loads(line.strip())
